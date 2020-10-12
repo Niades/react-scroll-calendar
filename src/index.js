@@ -57,6 +57,13 @@ export default class ScrollCalendar extends Component {
             endDate: startDate,
           });
         }
+      } else {
+        if(this.props.onSelect) {
+          this.props.onSelect({
+            startDate: startDate,
+            endDate: value,
+          });
+        }
       }
     }
   }

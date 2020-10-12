@@ -17008,6 +17008,13 @@ var ScrollCalendar = function (_Component) {
               endDate: startDate
             });
           }
+        } else {
+          if (this.props.onSelect) {
+            this.props.onSelect({
+              startDate: startDate,
+              endDate: value
+            });
+          }
         }
       }
     }
